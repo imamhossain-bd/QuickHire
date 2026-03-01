@@ -270,11 +270,7 @@ const JobsTab = ({ showToast, onJobClick }) => {
                 ) : (
                     <div className="divide-y divide-slate-50">
                         {jobs.map(job => (
-                            <div
-                                key={job.id}
-                                onClick={() => onJobClick(job.id)}
-                                className="px-5 py-3.5 flex items-center gap-4 hover:bg-slate-50/70 cursor-pointer transition-colors group"
-                            >
+                            <div key={job.id} onClick={() => onJobClick(job.id)} className="px-5 py-3.5 flex items-center gap-4 hover:bg-slate-50/70 cursor-pointer transition-colors group">
                                 <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center overflow-hidden shrink-0">
                                     {job.company_logo
                                         ? <img src={job.company_logo} alt={job.company} className="w-full h-full object-contain p-1" />
@@ -296,11 +292,8 @@ const JobsTab = ({ showToast, onJobClick }) => {
                                     <span className="text-[11px] text-slate-400">applied</span>
                                 </div>
 
-                                <button
-                                    onClick={e => handleToggle(job, e)}
-                                    className={`text-[11px] font-semibold px-3 py-1.5 rounded-full border transition-all shrink-0 flex items-center gap-1.5
-                                        ${job.is_active ? 'text-emerald-600 bg-emerald-50 border-emerald-100' : 'text-slate-400 bg-slate-50 border-slate-100'}`}
-                                >
+                                <button onClick={e => handleToggle(job, e)} className={`text-[11px] font-semibold px-3 py-1.5 rounded-full border transition-all shrink-0 flex items-center gap-1.5
+                                        ${job.is_active ? 'text-emerald-600 bg-emerald-50 border-emerald-100' : 'text-slate-400 bg-slate-50 border-slate-100'}`}>
                                     <span className={`w-1.5 h-1.5 rounded-full ${job.is_active ? 'bg-emerald-500' : 'bg-slate-300'}`} />
                                     {job.is_active ? 'Active' : 'Inactive'}
                                 </button>
@@ -423,14 +416,9 @@ const UsersTab = ({ showToast }) => {
                                 <span className="hidden sm:block text-[11px] text-slate-400 shrink-0">{u.created_at}</span>
                                 <span className="hidden md:block text-[11px] text-slate-400 shrink-0">{u.applications_count} apps</span>
 
-                                <select
-                                    value={u.role}
-                                    disabled={changingRole === u.id || u.id === me?.id}
-                                    onChange={e => handleRoleChange(u.id, e.target.value)}
-                                    className={`text-[12px] font-semibold px-3 py-1.5 rounded-full border outline-none cursor-pointer shrink-0 transition-colors
+                                <select value={u.role} disabled={changingRole === u.id || u.id === me?.id} onChange={e => handleRoleChange(u.id, e.target.value)} className={`text-[12px] font-semibold px-3 py-1.5 rounded-full border outline-none cursor-pointer shrink-0 transition-colors
                                         ${u.is_admin ? 'text-indigo-600 bg-indigo-50 border-indigo-100' : 'text-slate-500 bg-slate-50 border-slate-100'}
-                                        disabled:opacity-50 disabled:cursor-not-allowed`}
-                                >
+                                        disabled:opacity-50 disabled:cursor-not-allowed`}>
                                     <option value="user">User</option>
                                     <option value="admin">Admin</option>
                                 </select>

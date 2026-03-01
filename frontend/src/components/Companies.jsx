@@ -19,12 +19,10 @@ const Companies = () => (
     <section className="bg-white py-10">
         <div className="max-w-7xl mx-auto px-6">
 
-            {/* Label */}
             <p className="text-[#A8ADB7] text-lg mb-6">
                 Companies we helped grow
             </p>
 
-            {/* Logo strip */}
             <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-8">
                 {companies.map(({ name, logo }) => (
                     <img key={name} src={logo} alt={name} className="h-7 w-auto object-contain grayscale opacity-40 hover:opacity-60 transition-opacity duration-200" />

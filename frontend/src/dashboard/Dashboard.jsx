@@ -171,10 +171,7 @@ const Dashboard = () => {
                                 const jobData = app.job;
 
                                 return (
-                                    <div
-                                        key={app.id}
-                                        className="px-6 py-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 hover:bg-[#F8F8FD] transition-colors"
-                                    >
+                                    <div key={app.id} className="px-6 py-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 hover:bg-[#F8F8FD] transition-colors">
                                         <div className="w-10 h-10 bg-[#F8F8FD] border border-[#D6DDEB] flex items-center justify-center shrink-0 overflow-hidden">
                                             {jobData?.company_logo ? (
                                                 <img src={jobData.company_logo} alt={jobData.company} className="w-6 h-6 object-contain" />
@@ -206,10 +203,7 @@ const Dashboard = () => {
                                                     month: 'short', day: 'numeric', year: 'numeric',
                                                 })}
                                             </span>
-                                            <Link
-                                                to={`/jobs/${app.job_id}`}
-                                                className="text-[11px] text-[#4640DE] hover:underline whitespace-nowrap"
-                                            >
+                                            <Link to={`/jobs/${app.job_id}`} className="text-[11px] text-[#4640DE] hover:underline whitespace-nowrap">
                                                 View Job
                                             </Link>
                                         </div>

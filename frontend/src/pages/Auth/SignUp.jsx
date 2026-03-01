@@ -15,8 +15,7 @@ const Field = ({ label, type = 'text', placeholder, value, onChange, error }) =>
                 h-11 px-4 text-sm border outline-none bg-white
                 text-[#25324B] placeholder-[#A8ADB7] transition-colors duration-150
                 ${error ? 'border-red-400 focus:border-red-500' : 'border-[#D6DDEB] focus:border-[#4640DE]'}
-            `}
-        />
+            `} />
         {error && <span className="text-[11px] text-red-500">{error}</span>}
     </div>
 );

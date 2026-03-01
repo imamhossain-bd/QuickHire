@@ -85,7 +85,6 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Newsletter */}
                     <div className="lg:col-span-4">
                         <h4 className="text-sm font-bold mb-3 text-white">
                             Get job notifications
@@ -107,7 +106,6 @@ const Footer = () => {
                         2021 @ QuickHire. All rights reserved.
                     </p>
 
-                    {/* Social Icons */}
                     <div className="flex items-center gap-4">
                         {socialLinks.map(({ icon, alt }) => (
                             <a key={alt} href="#" aria-label={alt} className="w-8 h-8 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors">

@@ -87,14 +87,9 @@ const Login = () => {
 
                             <div className="flex flex-col gap-1.5">
                                 <label className="text-[13px] font-semibold text-[#25324B]">Email Address</label>
-                                <input
-                                    type="email"
-                                    placeholder="Enter your email address"
-                                    value={form.email}
-                                    onChange={set('email')}
-                                    className={`h-11 px-4 text-sm border outline-none bg-white text-[#25324B] placeholder-[#A8ADB7] transition-colors duration-150
-                                        ${errors.email ? 'border-red-400' : 'border-[#D6DDEB] focus:border-[#4640DE]'}`}
-                                />
+                                <input type="email" placeholder="Enter your email address" value={form.email} onChange={set('email')}
+                                    className={`h-11 px-4 text-sm border outline-none bg-white text-[#25324B] placeholder-[#A8ADB7] 
+                                    transition-colors duration-150 ${errors.email ? 'border-red-400' : 'border-[#D6DDEB] focus:border-[#4640DE]'}`} />
                                 {errors.email && <span className="text-[11px] text-red-500">{errors.email}</span>}
                             </div>
 
@@ -105,22 +100,13 @@ const Login = () => {
                                         Forgot password?
                                     </Link>
                                 </div>
-                                <input
-                                    type="password"
-                                    placeholder="Enter your password"
-                                    value={form.password}
-                                    onChange={set('password')}
-                                    className={`h-11 px-4 text-sm border outline-none bg-white text-[#25324B] placeholder-[#A8ADB7] transition-colors duration-150
-                                        ${errors.password ? 'border-red-400' : 'border-[#D6DDEB] focus:border-[#4640DE]'}`}
-                                />
+                                <input type="password" placeholder="Enter your password" value={form.password} onChange={set('password')}
+                                    className={`h-11 px-4 text-sm border outline-none bg-white text-[#25324B] placeholder-[#A8ADB7] 
+                                    transition-colors duration-150 ${errors.password ? 'border-red-400' : 'border-[#D6DDEB] focus:border-[#4640DE]'}`} />
                                 {errors.password && <span className="text-[11px] text-red-500">{errors.password}</span>}
                             </div>
 
-                            <button
-                                type="submit"
-                                disabled={loading}
-                                className="h-11 w-full text-sm font-bold text-white bg-[#4640DE] hover:bg-[#3d37c9] transition-colors duration-150 active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed mt-1"
-                            >
+                            <button type="submit" disabled={loading} className="h-11 w-full text-sm font-bold text-white bg-[#4640DE] hover:bg-[#3d37c9] transition-colors duration-150 active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed mt-1">
                                 {loading ? 'Signing in…' : 'Login'}
                             </button>
 

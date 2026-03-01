@@ -46,13 +46,8 @@ const StatusDropdown = ({ appId, current, onChange }) => {
     const c = STATUS_CONFIG[current] || STATUS_CONFIG.pending;
 
     return (
-        <select
-            value={current}
-            onChange={handleChange}
-            disabled={loading}
-            className={`text-[12px] font-semibold px-3 py-1.5 rounded-full border outline-none cursor-pointer transition-colors disabled:opacity-60
-                ${c.bg} ${c.text} ${c.border}`}
-        >
+        <select value={current} onChange={handleChange} disabled={loading} className={`text-[12px] font-semibold px-3 py-1.5 rounded-full border outline-none cursor-pointer transition-colors disabled:opacity-60
+                ${c.bg} ${c.text} ${c.border}`}>
             {Object.entries(STATUS_CONFIG).map(([val, cfg]) => (
                 <option key={val} value={val}>{cfg.label}</option>
             ))}
@@ -172,8 +167,7 @@ const AdminJobApplications = () => {
                                 ${filter === f.key
                                     ? 'bg-indigo-600 text-white border-indigo-600'
                                     : 'bg-white text-slate-500 border-slate-200 hover:border-slate-300'
-                                }`}
-                        >
+                                }`}>
                             {f.label}
                             <span className={`text-xs px-1.5 py-0.5 rounded-full ${filter === f.key ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'}`}>
                                 {f.count}
@@ -227,11 +221,7 @@ const AdminJobApplications = () => {
                                         {app.created_at ? new Date(app.created_at).toLocaleDateString('en-BD', { day: 'numeric', month: 'short', year: 'numeric' }) : ''}
                                     </span>
 
-                                    <StatusDropdown
-                                        appId={app.id}
-                                        current={app.status}
-                                        onChange={handleStatusChange}
-                                    />
+                                    <StatusDropdown appId={app.id} current={app.status} onChange={handleStatusChange} />
                                 </div>
                             ))}
                         </div>

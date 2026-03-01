@@ -93,27 +93,20 @@ const Navbar = () => {
                             </div>
                         ) : (
                             <>
-                                <Link
-                                    to="/login"
-                                    className="text-sm font-bold text-[#4640DE] hover:text-[#3d37c9] transition-colors">
+                                <Link to="/login" className="text-sm font-bold text-[#4640DE] hover:text-[#3d37c9] transition-colors">
                                     Login
                                 </Link>
                                 <div className="h-5 w-px bg-[#D6DDEB]" />
-                                <Link
-                                    to="/signup"
-                                    className="h-9 px-6 flex items-center text-sm font-bold text-white bg-[#4640DE] hover:bg-[#3d37c9] transition-colors duration-150 active:scale-[0.98]">
+                                <Link to="/signup" className="h-9 px-6 flex items-center text-sm font-bold text-white bg-[#4640DE] hover:bg-[#3d37c9] transition-colors duration-150 active:scale-[0.98]">
                                     Sign Up
                                 </Link>
                             </>
                         )}
                     </div>
 
-                    <button
-                        onClick={() => setMenuOpen(o => !o)}
-                        className="md:hidden p-2 -mr-2 text-[#25324B]"
+                    <button onClick={() => setMenuOpen(o => !o)} className="md:hidden p-2 -mr-2 text-[#25324B]"
                         aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-                        aria-expanded={menuOpen}
-                    >
+                        aria-expanded={menuOpen}>
                         <HamburgerIcon open={menuOpen} />
                     </button>
 

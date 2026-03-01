@@ -9,25 +9,20 @@ const Posting = () => {
 
                 <div className="relative bg-[#4640DE] flex flex-col lg:flex-row items-center overflow-hidden">
 
-                    <div
-                        className="absolute top-0 left-0 w-0 h-0"
+                    <div className="absolute top-0 left-0 w-0 h-0"
                         style={{
                             borderLeft: '50px solid white',
                             borderTop: '50px solid white',
                             borderRight: '50px solid transparent',
                             borderBottom: '50px solid transparent',
-                        }}
-                    />
+                        }} />
 
-                    <div
-                        className="absolute bottom-0 right-0 w-0 h-0"
-                        style={{
-                            borderRight: '50px solid white',
-                            borderBottom: '50px solid white',
-                            borderLeft: '50px solid transparent',
-                            borderTop: '50px solid transparent',
-                        }}
-                    />
+                    <div className="absolute bottom-0 right-0 w-0 h-0" style={{
+                        borderRight: '50px solid white',
+                        borderBottom: '50px solid white',
+                        borderLeft: '50px solid transparent',
+                        borderTop: '50px solid transparent',
+                    }} />
 
                     <div className="relative z-10 w-full lg:w-1/2 px-8 sm:px-12 lg:pl-20 lg:pr-10 py-12 lg:py-20 text-center lg:text-left">
                         <h2 className="text-3xl sm:text-4xl lg:text-[52px] font-bold text-white leading-[1.1] mb-4 font-clash">
@@ -36,10 +31,7 @@ const Posting = () => {
                         <p className="text-white text-sm sm:text-base lg:text-lg mb-8 opacity-90">
                             Start posting jobs for only $10.
                         </p>
-                        <Link
-                            to="/signup"
-                            className="inline-block bg-white text-[#4640DE] px-7 py-3 text-sm sm:text-base font-semibold hover:bg-gray-50 transition-all active:scale-95 shadow-lg"
-                        >
+                        <Link to="/signup" className="inline-block bg-white text-[#4640DE] px-7 py-3 text-sm sm:text-base font-semibold hover:bg-gray-50 transition-all active:scale-95 shadow-lg">
                             Sign Up For Free
                         </Link>
                     </div>
