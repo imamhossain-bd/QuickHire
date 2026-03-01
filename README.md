@@ -212,7 +212,7 @@ Frontend will be available at: `http://localhost:5173`
 ### Admin Account
 | Field    | Value                 |
 |----------|-----------------------|
-| Email    | admin@quickhire.com   |
+| Email    | admin@gmail.com   |
 | Password | admin123456           |
 | URL      | /admin                |
 
