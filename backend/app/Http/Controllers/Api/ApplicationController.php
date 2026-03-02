@@ -67,11 +67,6 @@ class ApplicationController extends Controller
 
         $application->load('job:id,title,company,location');
 
-        // Append cv_url to response
-        if ($cvPath) {
-            $application->cv_url = Storage::url($cvPath);
-        }
-
         return $this->createdResponse($application, 'Your application has been submitted successfully!');
     }
 
@@ -84,13 +79,7 @@ class ApplicationController extends Controller
         $applications = Application::with('job:id,title,company,location,company_logo,job_type')
             ->where('user_id', $request->user()->id)
             ->latest()
-            ->get()
-            ->map(function ($app) {
-                if ($app->cv_path) {
-                    $app->cv_url = Storage::url($app->cv_path);
-                }
-                return $app;
-            });
+            ->get();
 
         return $this->successResponse(
             [

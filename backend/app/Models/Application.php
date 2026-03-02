@@ -16,6 +16,8 @@ class Application extends Model
         'job_id', 'user_id', 'name', 'email', 'resume_link', 'cv_path', 'cover_note', 'status',
     ];
 
+    protected $appends = ['cv_url'];
+
     protected $casts = [
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
@@ -34,5 +36,10 @@ class Application extends Model
     public static function statuses(): array
     {
         return ['pending', 'reviewed', 'shortlisted', 'rejected'];
+    }
+
+    public function getCvUrlAttribute(): ?string
+    {
+        return $this->cv_path ? \Illuminate\Support\Facades\Storage::url($this->cv_path) : null;
     }
 }
