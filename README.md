@@ -8,7 +8,7 @@ A modern job board application built with **Laravel 10** (REST API) and **React 
 
 | Layer    | Technology                              |
 |----------|-----------------------------------------|
-| Backend  | Laravel 10, PHP 8.2, Laravel Sanctum    |
+| Backend  | Laravel 11, PHP 8.2, Laravel Sanctum    |
 | Frontend | React 18, Vite, Tailwind CSS            |
 | Database | MySQL                                   |
 | Auth     | Sanctum (token-based) + Role system     |
